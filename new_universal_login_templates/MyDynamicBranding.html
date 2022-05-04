@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{locale}}">
+  <head>
+    {%- auth0:head -%}
+    <style>
+      {% if application.name == 'auziro-ninja' %}
+      body {
+        background-image: url('https://wallpaperaccess.com/full/11045.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      #custom-prompt-logo {
+        background-image: url('https://as1.ftcdn.net/jpg/01/86/42/11/240_F_186421163_uRsiAyxHPXHrcrM4S1qia2vniehfIb02.jpg');
+      }
+      {% else %}
+      body {
+        background-image: url('https://i.ibb.co/SnXbvFN/17409.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      #custom-prompt-logo {
+        background-image: url('https://d2qcgv1x1k2it7.cloudfront.net/icons/logo/travel0-green.svg');
+      }
+      {% endif %}
+
+    </style>
+    <title>{{ prompt.screen.texts.pageTitle }}</title>
+
+  </head>
+  <body class="_widget-auto-layout _use-custom-prompt-logo">
+     {%- auth0:widget -%}
+  </body>
+</html>
